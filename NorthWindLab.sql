@@ -115,7 +115,7 @@ SELECT * FROM Products WHERE Discontinued = 1;
 SELECT * FROM Products WHERE ProductName LIKE '%Tofu%';
 
 --Find the product that has the highest unit price.
-
+SELECT * FROM Products WHERE (UnitPrice=(SELECT MAX(UnitPrice) FROM Products));
 
 --Get a list of all employees who got hired after 1/1/1993
 SELECT * FROM Employees WHERE HireDate > '1993-01-01';
