@@ -96,7 +96,7 @@ SELECT (UnitPrice - Discount) * Quantity FROM [Order Details] AS OrderTotal;
 SELECT * FROM Employees WHERE HireDate BETWEEN '1994-01-01' AND '2023-03-20';
 
 --Find how long employees have been working for Northwind (in years!)
-
+SELECT FirstName, DATEDIFF(year, HireDate, '2023-03-20') AS TotalYears FROM Employees;
 
 --Get a list of all products sorted by quantity (ascending and descending order)
 SELECT * FROM Products
