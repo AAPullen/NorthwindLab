@@ -76,7 +76,7 @@ SELECT MIN(Quantity) AS SmallestQuantity
 FROM [Order Details];
 
 --Find all customers living in London or Paris
-SELECT * FROM Customers WHERE City = 'London' OR City = 'Paris';
+SELECT * FROM Customers WHERE City IN ('London', 'Paris');
 
 --Do an inner join, left join, right join on orders and customers tables.
 SELECT Customers.CustomerID, Orders.OrderID, Orders.Freight
