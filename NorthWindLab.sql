@@ -101,7 +101,7 @@ SELECT FirstName From Employees
 ORDER BY FirstName;
 
 --Find total for each order
-SELECT (UnitPrice - Discount) * Quantity FROM [Order Details] AS OrderTotal;
+SELECT (UnitPrice - Discount) * Quantity AS OrderTotal FROM [Order Details];
 
 --Get a list of all employees who got hired between 1/1/1994 and today
 SELECT * FROM Employees WHERE HireDate BETWEEN '1994-01-01' AND '2023-03-20';
