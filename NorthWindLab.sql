@@ -51,7 +51,19 @@ SELECT FirstName FROM Employees Where ReportsTo = 2;
 
 
 --Optional additional query practice (extended challenge):
+
 --Calculate the average, max, and min of the quantity at the orderdetails table, grouped by the orderid.
+SELECT AVG(Quantity) AS AverageQuantity
+FROM [Order Details]
+GROUP BY OrderID;
+
+SELECT MAX(Quantity) AS LargestQuantity
+FROM [Order Details]
+GROUP BY OrderID;
+
+SELECT MIN(Quantity) AS SmallestQuantity
+FROM [Order Details]
+GROUP BY OrderID;
 
 --Calculate the average, max, and min of the quantity at the orderdetails table.
 SELECT AVG(Quantity) AS AverageQuantity
@@ -83,7 +95,6 @@ ON Orders.CustomerID = Customers.CustomerID;
 
 --Make a list of cities where customers are coming from. The list should not have any duplicates or nulls.
 SELECT DISTINCT City FROM Customers WHERE NOT City IS NULL;
-
 
 --Show a sorted list of employees’ first names. 
 SELECT FirstName From Employees
